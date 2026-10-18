@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#0b2a3c"><title>مشروع أبو شقرة — HINDAWY Agency</title><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}</style></head><body>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;800;900&family=Outfit:wght@400;600;800&display=swap">
+<style>
+/* Layout: مساحة العميل — هيدر الوكالة، ثم المشروع، ثم بلاطات مرتبة بترتيب الاستخدام، وعمود واحد على الموبايل */
+:root{
+  --bg:#f2f5f6; --card:#ffffff; --fg:#0e1f2e; --mute:#5b6d7c; --line:#dbe3e8;
+  --brand:#0f766e; --brand-2:#14b8a6; --deep:#0b2a3c; --gold:#e9a72e; --gold-ink:#3b2a00; --sheet:#1f9d55; --tint:#e5f3f1;
+  --f-ar:"Cairo","Segoe UI",Tahoma,sans-serif; --f-en:"Outfit","Cairo",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#071520; --card:#0e212e; --fg:#e7f2f1; --mute:#9bb2bd; --line:#1c3444; --brand:#2dd4bf; --brand-2:#5eead4; --deep:#0b2a3c; --gold:#f5b544; --sheet:#4ade80; --tint:#113041; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#071520; --card:#0e212e; --fg:#e7f2f1; --mute:#9bb2bd; --line:#1c3444; --brand:#2dd4bf; --brand-2:#5eead4; --deep:#0b2a3c; --gold:#f5b544; --sheet:#4ade80; --tint:#113041; color-scheme:dark}
+*{box-sizing:border-box}[hidden]{display:none!important}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-ar);direction:rtl;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 40px}
+.wrap{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
+
+.agency{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-inline:4px}
+.agency .mark{font-family:var(--f-en);font-weight:800;font-size:22px;letter-spacing:5px;direction:ltr}
+.agency .mark span{font-weight:400;letter-spacing:3px;color:var(--mute);font-size:14px;margin-left:6px}
+.agency small{font-size:13px;color:var(--mute)}
+
+.hero{border-radius:24px;padding:22px;color:#fff;background:radial-gradient(600px 300px at 0% 100%,rgba(233,167,46,.35),transparent 60%),linear-gradient(125deg,#0b2a3c,#0f766e 75%);display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.hero .badge{width:64px;height:64px;border-radius:20px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;flex:none}
+.hero .badge svg{width:40px;height:40px}
+.hero h1{margin:0;font-size:28px;font-weight:900;line-height:1.2;text-wrap:balance}
+.hero p{margin:4px 0 0;font-size:14px;color:#cfeeea;line-height:1.7}
+.hero .prod{margin-top:8px;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border-radius:30px;padding:4px 12px;font-size:13px;font-weight:700}
+.hero .prod b{color:#ffe2a3}
+
+.group{display:flex;flex-direction:column;gap:10px}
+.group h2{margin:0;font-size:13px;font-weight:800;letter-spacing:.5px;color:var(--mute);padding-inline:4px}
+.tile{display:flex;align-items:center;gap:14px;padding:16px;border-radius:18px;background:var(--card);border:1px solid var(--line);color:inherit;text-decoration:none;transition:transform .15s,border-color .15s;min-width:0}
+.tile:hover{transform:translateY(-2px);border-color:var(--brand-2)}
+.tile:focus-visible,.cls a:focus-visible{outline:3px solid var(--brand-2);outline-offset:2px}
+.num{font-family:var(--f-en);font-weight:600;font-size:15px;color:var(--mute);width:22px;text-align:center;flex:none}
+.ic{width:52px;height:52px;border-radius:15px;display:flex;align-items:center;justify-content:center;flex:none;background:var(--tint);color:var(--brand)}
+.ic svg{width:28px;height:28px}
+.ic.gold{background:var(--gold);color:var(--gold-ink)}.ic.sheet{background:var(--sheet);color:#fff}.ic.deep{background:var(--deep);color:#fff}
+.txt{flex:1;min-width:0}.txt b{display:block;font-size:18px;font-weight:800}.txt span{display:block;font-size:14px;color:var(--mute);line-height:1.6}
+.tag{font-size:12px;font-weight:800;padding:3px 10px;border-radius:20px;background:var(--tint);color:var(--brand);white-space:nowrap;flex:none}
+.tag.live{background:color-mix(in srgb,var(--sheet) 18%,transparent);color:var(--sheet)}
+.tag.live::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:currentColor;margin-inline-end:6px;animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.3}}
+.classes{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.cls{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 14px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.cls b{font-size:17px;font-weight:800}
+.cls .two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cls a{display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;font-size:14px;font-weight:800;border-radius:11px;padding:9px 6px;border:1px solid var(--line);color:var(--fg);background:var(--bg)}
+.cls a:hover{border-color:var(--brand-2);color:var(--brand)}
+.cls a.att{background:color-mix(in srgb,var(--sheet) 14%,var(--card));border-color:color-mix(in srgb,var(--sheet) 35%,var(--line));color:var(--sheet)}
+.cls a svg{width:16px;height:16px;flex:none}
+.note{border-radius:16px;border:1px dashed var(--line);padding:14px 16px;font-size:14px;line-height:1.9;color:var(--mute)}
+.note b{color:var(--fg)}
+.byline{display:flex;flex-direction:column;align-items:center;gap:6px;padding-block:18px 4px;text-align:center}
+.byline small{font-size:12px;letter-spacing:3px;color:var(--mute);font-family:var(--f-en)}
+.byline strong{font-family:var(--f-en);font-weight:800;font-size:clamp(36px,10vw,64px);line-height:1;letter-spacing:clamp(4px,1.4vw,10px);direction:ltr;
+  background:linear-gradient(90deg,var(--brand),var(--brand-2) 55%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.byline em{font-style:normal;font-family:var(--f-en);font-size:14px;color:var(--mute);direction:ltr}
+@media (max-width:520px){.tile .tag{display:none}.hero h1{font-size:23px}}
+@media (prefers-reduced-motion:reduce){.tile{transition:none}.tag.live::before{animation:none}}
+</style>
+
+<div class="wrap">
+ <div class="agency"><a class="mark" href="../" style="text-decoration:none;color:inherit">HINDAWY<span>AGENCY</span></a><small>مساحة العميل</small></div>
+
+ <header class="hero">
+  <span class="badge"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="10" width="40" height="46" rx="8" fill="#fff"/><rect x="23" y="5" width="18" height="10" rx="4" fill="#f5b544"/><path d="M21 34l8 8 15-17" fill="none" stroke="#0f766e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+  <div style="min-width:0;flex:1">
+   <h1>مشروع أبو شقرة</h1>
+   <p>مدرسة الشهيد الرائد محمد سيد أبو شقرة</p>
+   <span class="prod">البرنامج: <b>حاضر</b> · نظام تسجيل الغياب</span>
+  </div>
+ </header>
+
+ <section class="group" aria-labelledby="g1">
+  <h2 id="g1">العرض</h2>
+  <a class="tile" href="https://ahmedelhendway0-byte.github.io/rased/presentation.html" target="_blank" rel="noopener">
+   <span class="num">1</span><span class="ic gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4M8 20h8M10 8l4 2-4 2z"/></svg></span>
+   <span class="txt"><b>عرض المشروع</b><span>فكرة البرنامج، وتجربة حيّة للرائد والإدارة، وأفكار جاية</span></span>
+   <span class="tag">ديمو جوّاه</span>
+  </a>
+ </section>
+
+ <section class="group" aria-labelledby="g2">
+  <h2 id="g2">البرنامج</h2>
+  <a class="tile" href="https://ahmedelhendway0-byte.github.io/rased/admin.html" target="_blank" rel="noopener">
+   <span class="num">2</span><span class="ic deep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+   <span class="txt"><b>لوحة الإدارة</b><span>كل الفصول، ومين سجّل، وسجل الشهر، والتنبيهات</span></span>
+   <span class="tag live">لايف</span>
+  </a>
+  <a class="tile" href="https://ahmedelhendway0-byte.github.io/rased/raed.html" target="_blank" rel="noopener">
+   <span class="num">3</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/></svg></span>
+   <span class="txt"><b>تطبيق الرائد</b><span>الرابط اللي بيتبعت للرواد، وكل رائد بيشوف فصله بس</span></span>
+   <span class="tag live">لايف</span>
+  </a>
+ </section>
+
+ <section class="group" aria-labelledby="g3">
+  <h2 id="g3">سجلات المدرسة (بتتحدّث لايف مع البرنامج)</h2>
+  <a class="tile" href="https://docs.google.com/spreadsheets/d/1jnnMp2q0RYq62Funj-6oHWZ4kcQI6a147AhtH1JpuBg/edit" target="_blank" rel="noopener">
+   <span class="num">4</span><span class="ic sheet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 3v18"/></svg></span>
+   <span class="txt"><b>سجل الغياب</b><span>جدول لكل فصل، الصفوف للطلاب والأعمدة للأيام</span></span>
+   <span class="tag live">لايف</span>
+  </a>
+  <div class="classes" id="classes"></div>
+ </section>
+
+ <div class="note"><b>الدخول للبرنامج:</b> كل رائد ليه اسم مستخدم وكلمة سر خاصين بيه، والإدارة ليها حساب لوحدها. الحسابات بتوصلكم من HINDAWY Agency.<br>السجلات بتفتح بس للحسابات اللي متشارك معاها الملف.</div>
+
+ <footer class="byline"><small>POWERED BY</small><strong>HINDAWY</strong><em>Take it easy. We’ve got the rest.</em></footer>
+</div>
+
+<script>
+(function(){
+  var ST="https://docs.google.com/spreadsheets/d/1WJfbHYaCqcIaOHXmit-MXDGG0xoggXVYkVM0kFltuAY/edit#gid=",
+      AT="https://docs.google.com/spreadsheets/d/1jnnMp2q0RYq62Funj-6oHWZ4kcQI6a147AhtH1JpuBg/edit#gid=";
+  var C=[["أولى أول",820502185,1563162084],["أولى ثاني",1772232469,1375439235],["أولى ثالث",644362583,1822680961],["أولى رابع",443574931,1737167700],
+         ["أولى خامس",2120906226,1397072844],["أولى سادس",197793340,1593217413],["أولى سابع",1723557064,64023188]];
+  var pi='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5"/></svg>',
+      gi='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 3v18"/></svg>';
+  document.getElementById("classes").innerHTML=C.map(function(c){
+    return '<div class="cls"><b>'+c[0]+'</b><div class="two"><a href="'+ST+c[1]+'" target="_blank" rel="noopener">'+pi+'الطلاب</a><a class="att" href="'+AT+c[2]+'" target="_blank" rel="noopener">'+gi+'الغياب</a></div></div>';
+  }).join("");
+})();
+</script>
+</body></html>
