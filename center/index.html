@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#1e1b4b"><title>سنتر هنداوي — HINDAWY Agency</title><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}</style></head><body>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;800;900&family=Outfit:wght@400;600;800&display=swap">
+<style>
+/* Layout: مساحة العميل — نفس صفحة أبو شقرة: هيدر الوكالة، ثم المشروع، ثم بلاطات بترتيب الاستخدام */
+:root{
+  --bg:#f3f3fb; --card:#ffffff; --fg:#14142b; --mute:#5d5f7a; --line:#dfe0ef;
+  --brand:#4f46e5; --brand-2:#06b6d4; --deep:#1e1b4b; --gold:#e9a72e; --gold-ink:#3b2a00; --sheet:#1f9d55; --tint:#ecebfd;
+  --f-ar:"Cairo","Segoe UI",Tahoma,sans-serif; --f-en:"Outfit","Cairo",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0b0b1e; --card:#14143a; --fg:#ececff; --mute:#a3a5c8; --line:#26275a; --brand:#818cf8; --brand-2:#22d3ee; --deep:#1e1b4b; --gold:#f5b544; --sheet:#4ade80; --tint:#1d1d4a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0b0b1e; --card:#14143a; --fg:#ececff; --mute:#a3a5c8; --line:#26275a; --brand:#818cf8; --brand-2:#22d3ee; --deep:#1e1b4b; --gold:#f5b544; --sheet:#4ade80; --tint:#1d1d4a; color-scheme:dark}
+*{box-sizing:border-box}[hidden]{display:none!important}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-ar);direction:rtl;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 40px}
+.wrap{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
+.agency{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-inline:4px}
+.agency .mark{font-family:var(--f-en);font-weight:800;font-size:22px;letter-spacing:5px;direction:ltr}
+.agency .mark span{font-weight:400;letter-spacing:3px;color:var(--mute);font-size:14px;margin-left:6px}
+.agency small{font-size:13px;color:var(--mute)}
+.hero{border-radius:24px;padding:22px;color:#fff;background:radial-gradient(600px 300px at 0% 100%,rgba(233,167,46,.35),transparent 60%),linear-gradient(125deg,#1e1b4b,#4f46e5 60%,#06b6d4);display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.hero .badge{width:64px;height:64px;border-radius:20px;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;flex:none}
+.hero .badge svg{width:40px;height:40px}
+.hero h1{margin:0;font-size:28px;font-weight:900;line-height:1.2;text-wrap:balance}
+.hero p{margin:4px 0 0;font-size:14px;color:#e0e7ff;line-height:1.7}
+.hero .prod{margin-top:8px;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border-radius:30px;padding:4px 12px;font-size:13px;font-weight:700}
+.hero .prod b{color:#ffe2a3}
+.group{display:flex;flex-direction:column;gap:10px}
+.group h2{margin:0;font-size:13px;font-weight:800;letter-spacing:.5px;color:var(--mute);padding-inline:4px}
+.tile{display:flex;align-items:center;gap:14px;padding:16px;border-radius:18px;background:var(--card);border:1px solid var(--line);color:inherit;text-decoration:none;transition:transform .15s,border-color .15s;min-width:0}
+a.tile:hover{transform:translateY(-2px);border-color:var(--brand-2)}
+.tile:focus-visible{outline:3px solid var(--brand-2);outline-offset:2px}
+.tile.off{opacity:.7}
+.num{font-family:var(--f-en);font-weight:600;font-size:15px;color:var(--mute);width:22px;text-align:center;flex:none}
+.ic{width:52px;height:52px;border-radius:15px;display:flex;align-items:center;justify-content:center;flex:none;background:var(--tint);color:var(--brand)}
+.ic svg{width:28px;height:28px}
+.ic.gold{background:var(--gold);color:var(--gold-ink)}.ic.sheet{background:var(--sheet);color:#fff}.ic.deep{background:var(--deep);color:#fff}
+.txt{flex:1;min-width:0}.txt b{display:block;font-size:18px;font-weight:800}.txt span{display:block;font-size:14px;color:var(--mute);line-height:1.6}
+.tag{font-size:12px;font-weight:800;padding:3px 10px;border-radius:20px;background:var(--tint);color:var(--brand);white-space:nowrap;flex:none}
+.tag.live{background:color-mix(in srgb,var(--sheet) 18%,transparent);color:var(--sheet)}
+.tag.live::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:currentColor;margin-inline-end:6px;animation:pulse 1.6s infinite}
+.tag.wait{background:color-mix(in srgb,var(--gold) 20%,transparent);color:var(--gold)}
+@keyframes pulse{50%{opacity:.3}}
+.note{border-radius:16px;border:1px dashed var(--line);padding:14px 16px;font-size:14px;line-height:1.9;color:var(--mute)}
+.note b{color:var(--fg)}
+.byline{display:flex;flex-direction:column;align-items:center;gap:6px;padding-block:18px 4px;text-align:center}
+.byline small{font-size:12px;letter-spacing:3px;color:var(--mute);font-family:var(--f-en)}
+.byline strong{font-family:var(--f-en);font-weight:800;font-size:clamp(36px,10vw,64px);line-height:1;letter-spacing:clamp(4px,1.4vw,10px);direction:ltr;
+  background:linear-gradient(90deg,var(--brand),var(--brand-2) 55%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.byline em{font-style:normal;font-family:var(--f-en);font-size:14px;color:var(--mute);direction:ltr}
+@media (max-width:520px){.tile .tag{display:none}.hero h1{font-size:23px}}
+@media (prefers-reduced-motion:reduce){.tile{transition:none}.tag.live::before{animation:none}}
+</style>
+
+<div class="wrap">
+ <div class="agency"><a class="mark" href="../" style="text-decoration:none;color:inherit">HINDAWY<span>AGENCY</span></a><small>مساحة العميل</small></div>
+
+ <header class="hero">
+  <span class="badge"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 26 32 14l24 12-24 12z" fill="#fff"/><path d="M18 31v10c0 4 7 8 14 8s14-4 14-8V31l-14 7z" fill="#c7d2fe"/><path d="M52 28v14" stroke="#f5b544" stroke-width="4" stroke-linecap="round"/><circle cx="52" cy="45" r="4" fill="#f5b544"/></svg></span>
+  <div style="min-width:0;flex:1">
+   <h1>مشروع سنتر هنداوي</h1>
+   <p>سيستم إدارة سنتر دروس: صاحب السنتر، والمدرسين، والأسيستنتس، والطلاب، وأولياء الأمور</p>
+   <span class="prod">البرنامج: <b>سيستم السنتر</b> · حضور · دفع · درجات · رسايل</span>
+  </div>
+ </header>
+
+ <section class="group" aria-labelledby="g1">
+  <h2 id="g1">العرض</h2>
+  <a class="tile" href="https://ahmedelhendway0-byte.github.io/center/presentation/" target="_blank" rel="noopener">
+   <span class="num">1</span><span class="ic gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4M8 20h8M10 8l4 2-4 2z"/></svg></span>
+   <span class="txt"><b>عرض المشروع</b><span>يوم في السنتر خطوة خطوة، وكل ميزة ليها ديمو حي</span></span>
+   <span class="tag">ديمو جوّاه</span>
+  </a>
+ </section>
+
+ <section class="group" aria-labelledby="g2">
+  <h2 id="g2">البرنامج</h2>
+  <a class="tile" href="https://ahmedelhendway0-byte.github.io/center/#login-owner" target="_blank" rel="noopener">
+   <span class="num">2</span><span class="ic deep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+   <span class="txt"><b>لوحة صاحب السنتر</b><span>كل المدرسين، ودخل السنتر، والمصاريف، والقاعات والجدول</span></span>
+   <span class="tag live">لايف</span>
+  </a>
+  <a class="tile" href="https://ahmedelhendway0-byte.github.io/center/#login-teacher" target="_blank" rel="noopener">
+   <span class="num">3</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="7" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span>
+   <span class="txt"><b>المدرس</b><span>لوحته، والمجموعات، والدرجات، والرسايل، والأسيستنتس بتوعه</span></span>
+   <span class="tag live">لايف</span>
+  </a>
+  <a class="tile" href="https://ahmedelhendway0-byte.github.io/center/#login-assistant" target="_blank" rel="noopener">
+   <span class="num">4</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4M9 8l2 2 4-4"/></svg></span>
+   <span class="txt"><b>الأسيستنت</b><span>تسجيل الحصة: حضور ودفع وكويز وامتحان، وإرسال التقارير</span></span>
+   <span class="tag live">لايف</span>
+  </a>
+  <a class="tile" href="https://ahmedelhendway0-byte.github.io/center/#login-parent" target="_blank" rel="noopener">
+   <span class="num">5</span><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="8" cy="7" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20c.7-3.5 3-5.5 6-5.5s5.3 2 6 5.5M14 20c.4-2.4 1.6-4 3-4s2.6 1.6 3 4"/></svg></span>
+   <span class="txt"><b>الطالب وولي الأمر</b><span>الحضور والدرجات والإعلانات والمذكرات</span></span>
+   <span class="tag live">لايف</span>
+  </a>
+ </section>
+
+ <section class="group" aria-labelledby="g3">
+  <h2 id="g3">سجلات السنتر (بتتحدّث لايف مع البرنامج)</h2>
+  <a class="tile" id="sheet" href="#" target="_blank" rel="noopener">
+   <span class="num">6</span><span class="ic sheet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M10 3v18"/></svg></span>
+   <span class="txt"><b>شيت السنتر</b><span>ملخص المدرسين، والطلاب، وتاب لكل مجموعة: حضور يوم بيوم ودرجات ودفع</span></span>
+   <span class="tag wait" id="sheetTag">بيتجهّز</span>
+  </a>
+ </section>
+
+ <div class="note"><b>الدخول للبرنامج:</b> كل مدرس وأسيستنت وطالب وولي أمر ليه حساب خاص بيه، وصاحب السنتر ليه حساب لوحده. الحسابات بتوصلكم من HINDAWY Agency.<br>السجلات بتفتح بس للحسابات اللي متشارك معاها الملف.</div>
+
+ <footer class="byline"><small>POWERED BY</small><strong>HINDAWY</strong><em>Take it easy. We’ve got the rest.</em></footer>
+</div>
+<script>
+(function(){
+  var SHEET = ""; // رابط شيت السنتر بعد ما يتعمل
+  var a = document.getElementById("sheet");
+  if (SHEET) { a.href = SHEET; var t = document.getElementById("sheetTag"); t.className = "tag live"; t.textContent = "لايف"; }
+  else { a.classList.add("off"); a.removeAttribute("href"); a.removeAttribute("target"); }
+})();
+</script>
+</body></html>
