@@ -71,4 +71,9 @@ code{font-family:var(--f-en);direction:ltr;display:inline-block;background:var(-
 footer{text-align:center;font-family:var(--f-mark);font-size:12px;letter-spacing:.4em;color:var(--mute);padding-top:10px;display:flex;flex-direction:column;gap:10px;align-items:center}
 footer a{font-family:var(--f-ar);letter-spacing:0;font-size:13px;color:var(--mute);text-decoration:none;border:1px solid var(--line);border-radius:20px;padding:5px 14px}
 footer a:hover{color:var(--teal);border-color:var(--teal)}
+footer a.hw{font-family:var(--f-mark);letter-spacing:.4em;font-size:12px;border:0;padding:0}
+/* the portfolio: a button under the slogan and a wide card above the projects */
+.pf-btn{margin-top:12px;align-self:flex-start;direction:rtl;font-weight:800;font-size:15px;text-decoration:none;color:var(--gold-ink);background:var(--gold);padding:10px 18px;border-radius:14px}
+.pf-btn:hover{filter:brightness(1.08)}
+.proj.pf{border-color:color-mix(in srgb,var(--teal) 45%,var(--line))}
 @media (prefers-reduced-motion:reduce){.proj{transition:none}.chip.live::before{animation:none}}

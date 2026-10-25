@@ -58,6 +58,11 @@ body{background:var(--bg);color:var(--fg);font-family:var(--f-ar);direction:rtl;
 .byline small{font-size:12px;letter-spacing:3px;color:var(--mute);font-family:var(--f-en)}
 .byline strong{font-family:var(--f-en);font-weight:800;font-size:clamp(36px,10vw,64px);line-height:1;letter-spacing:clamp(4px,1.4vw,10px);direction:ltr;
   background:linear-gradient(90deg,var(--brand),var(--brand-2) 55%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+/* HINDAWY opens the portfolio */
+.byline a.hw{text-decoration:none;color:inherit}.byline a.hw:hover strong{opacity:.85}
+.byline .hw-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:6px}
+.byline .hw-btns a{font-size:13px;font-weight:800;text-decoration:none;color:inherit;padding:7px 14px;border-radius:99px;border:1px solid currentColor;opacity:.85}
+.byline .hw-btns a:hover{opacity:1}
 .byline em{font-style:normal;font-family:var(--f-en);font-size:14px;color:var(--mute);direction:ltr}
 @media (max-width:520px){.tile .tag{display:none}.hero h1{font-size:23px}}
 @media (prefers-reduced-motion:reduce){.tile{transition:none}.tag.live::before{animation:none}}
@@ -110,7 +115,7 @@ body{background:var(--bg);color:var(--fg);font-family:var(--f-ar);direction:rtl;
 
  <div class="note"><b>الدخول للبرنامج:</b> كل رائد ليه اسم مستخدم وكلمة سر خاصين بيه، والإدارة ليها حساب لوحدها. الحسابات بتوصلكم من HINDAWY Agency.<br>السجلات بتفتح بس للحسابات اللي متشارك معاها الملف.</div>
 
- <footer class="byline"><small>POWERED BY</small><strong>HINDAWY</strong><em>Take it easy. We’ve got the rest.</em></footer>
+ <footer class="byline"><small>POWERED BY</small><a class="hw" href="https://ahmedelhendway0-byte.github.io/portfolio/" target="_blank" rel="noopener"><strong>HINDAWY</strong></a><em>Take it easy. We’ve got the rest.</em><span class="hw-btns"><a href="https://ahmedelhendway0-byte.github.io/portfolio/" target="_blank" rel="noopener">اعرف أكتر</a><a href="https://ahmedelhendway0-byte.github.io/portfolio/#team" target="_blank" rel="noopener">اعرف أكتر عن المؤسسين</a></span></footer>
 </div>
 
 <script>
