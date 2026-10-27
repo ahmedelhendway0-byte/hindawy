@@ -1,6 +1,6 @@
 /* مشاركة اللينكات (واتساب / نسخ / مشاركة الموبايل) — HINDAWY Agency
-   - صفحات العملاء: زرار مشاركة جنب كل لينك (a.tile)، وزرار «شارك كل اللينكات» تحت الهيدر.
-   - الصفحة الرئيسية: زرار مشاركة صغير على كل كارت (a.proj).
+   - صفحات العملاء: زرار مشاركة جنب كل لينك (a.tile)، وزرار «ابعت لينكات المشروع للعميل» بلينكات المشروع ده بس. الشيتات (سجلات داخلية) مش بتتبعت.
+   - الصفحة الرئيسية: زرار مشاركة على كارت البورتفوليو بس.
    - من أي صفحة تانية: HShare.open(عنوان, وصف, لينك) أو HShare.openAll(عنوان, [[اسم, لينك], ...]). */
 (function () {
   var ICON = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>';
@@ -58,7 +58,8 @@
     var b = a.querySelector('b, h3'), s = a.querySelector('.txt>span, p');
     return { name: b ? b.textContent.trim() : a.textContent.trim(), desc: s ? s.textContent.trim() : '', url: a.href };
   }
-  function shareable(a) { var h = a.getAttribute('href') || ''; return h && h.charAt(0) !== '#' && /^https?:/.test(a.href) && !a.classList.contains('off'); }
+  /* اللي بيتبعت للعميل بس: الشيتات (سجلات داخلية) مالهاش زرار */
+  function shareable(a) { var h = a.getAttribute('href') || ''; return h && h.charAt(0) !== '#' && /^https?:/.test(a.href) && !/docs\.google\.com/.test(a.href) && !a.classList.contains('off'); }
 
   var H = window.HShare = {
     open: function (name, desc, url) {
@@ -84,14 +85,16 @@
   function init() {
     var tiles = [].slice.call(document.querySelectorAll('a.tile')).filter(shareable);
     tiles.forEach(function (a) { btn(a, 'shr-row'); });
-    [].slice.call(document.querySelectorAll('a.proj')).filter(shareable).forEach(function (a) { btn(a, 'shr-wrap'); });
+    /* زرار واحد يبعت لينكات المشروع اللي تخص العميل (من غير الشيتات) */
     var hero = document.querySelector('.hero');
     if (hero && tiles.length > 1) {
       var all = document.createElement('button'); all.type = 'button'; all.className = 'shr-all';
-      all.innerHTML = WA + 'شارك كل لينكات المشروع';
-      all.onclick = function () { H.openAll(project(), tiles.filter(shareable).map(function (a) { var i = info(a); return [i.name, i.url]; })); };
+      all.innerHTML = WA + 'ابعت لينكات المشروع للعميل';
+      all.onclick = function () { H.openAll(project(), tiles.map(function (a) { var i = info(a); return [i.name, i.url]; })); };
       hero.parentNode.insertBefore(all, hero.nextSibling);
     }
+    /* الرئيسية: البورتفوليو بس (صفحات العملاء فيها حاجات داخلية) */
+    [].slice.call(document.querySelectorAll('a.proj.pf')).filter(shareable).forEach(function (a) { btn(a, 'shr-wrap'); });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
